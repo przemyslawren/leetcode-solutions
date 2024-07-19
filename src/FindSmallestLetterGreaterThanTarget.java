@@ -1,11 +1,15 @@
+import util.TimerUtility;
+
 public class FindSmallestLetterGreaterThanTarget {
 
     public static void main(String[] args) {
         char[] letters = new char[] {'c','f','j'};
         char target = 'a';
+        String noBrainer = TimerUtility.measureExecutionTime(() -> nextGreatestLetter(letters, target));
+        String binarySearch = TimerUtility.measureExecutionTime(() -> nextGreatestLetterBinarySearch(letters, target));
 
-        System.out.println(nextGreatestLetter(letters, target));
-        System.out.println(nextGreatestLetterBinarySearch(letters, target));
+        System.out.println("Brute Force:\n" + noBrainer);
+        System.out.println("Binary Search:\n" + binarySearch);
 
     }
 
