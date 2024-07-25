@@ -28,7 +28,6 @@ public class ContainsDuplicate {
         }
         return false;
     }
-
     //Sorting
     //Time Complexity: O(nlogn)
     //Space Complexity: O(1)
